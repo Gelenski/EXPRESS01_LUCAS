@@ -2,11 +2,11 @@ const express = require("express");
 const server2 = express();
 
 server2.get("/", (req, res) => {
-  res.sendFile("./html/principal.html", { root: __dirname });
+  res.send("<h1>Olá ExpressJS.</h1>");
 });
 
 server2.get("/principal", (req, res) => {
-  res.send("<h1>Olá ExpressJS.</h1>");
+  res.sendFile("./html/principal.html", { root: __dirname });
 });
 
 server2.get("/serviços", (req, res) => {
